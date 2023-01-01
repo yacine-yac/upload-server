@@ -30,7 +30,7 @@ let status= false;
 app.post("/upload",async (req,res)=>{
     //  res.append("Access-Control-Allow-Origin", "*");
        console.log('=>>>>>>>>>>>>>>>>>',req.files);
-    
+       req.socket.setTimeout(10 * 60 * 1000);
      res.send('toktok');
       if(req.files){
         
